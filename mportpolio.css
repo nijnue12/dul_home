@@ -1,0 +1,367 @@
+﻿/* ============================================
+   mportpolio.css
+   아기공룡 둘리 레트로 팝 애니메이션 스타일
+   ============================================ */
+
+
+/* ============================================
+   1. 전체 페이지 기본 설정
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* 굵직하고 친근한 폰트와 밝고 팝한 배경 */
+    font-family: "Jalnan", "맑은 고딕", "Malgun Gothic", sans-serif;
+    background-color: #F4F9E9; /* 레트로 애니메이션 배경톤 */
+    color: #1E2923;
+    line-height: 1.8;
+}
+
+
+/* ============================================
+   2. 헤더 (비비드 둘리 그린 & 만화 패턴 느낌)
+   ============================================ */
+
+header {
+    width: 100%;
+    padding: 45px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #28B463 0%, #2ECC71 50%, #F4D03F 100%);
+    border-bottom: 5px solid #1E2923; /* 만화 선화 느낌의 두꺼운 테두리 */
+    box-shadow: 0 6px 0px #1E2923;
+}
+
+header h1 {
+    color: #FFFFFF;
+    font-size: 38px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    /* 만화 타이틀 스타일 텍스트 그림자 */
+    text-shadow: 3px 3px 0px #1E2923, -2px -2px 0px #1E2923, 2px -2px 0px #1E2923, -2px 2px 0px #1E2923;
+}
+
+
+/* ============================================
+   3. 내비게이션 (팝아트 버튼 스타일)
+   ============================================ */
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 20px;
+    background-color: #FFFDF0;
+    border-bottom: 4px solid #1E2923;
+}
+
+nav span {
+    display: inline-block;
+}
+
+nav a {
+    display: block;
+    min-width: 105px;
+    padding: 10px 22px;
+    color: #1E2923;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 800;
+    border-radius: 30px;
+    border: 3px solid #1E2923; /* 진한 만화 외곽선 */
+    box-shadow: 3px 3px 0px #1E2923; /* 만화 특유의 평면 3D 그림자 */
+    transition: all 0.15s ease-in-out;
+}
+
+
+/* 각 캐릭터 포인트 원색 알록달록 매칭 */
+
+nav span:nth-child(1) a {
+    background-color: #2ECC71; /* 둘리 초록 */
+    color: #FFFFFF;
+}
+
+nav span:nth-child(2) a {
+    background-color: #FFD54F; /* 희동이 노랑 */
+}
+
+nav span:nth-child(3) a {
+    background-color: #4FC3F7; /* 또치 하늘색 */
+}
+
+nav span:nth-child(4) a {
+    background-color: #FF8A65; /* 도우너/마이콜 코랄 주황 */
+    color: #FFFFFF;
+}
+
+
+/* 메뉴 마우스 오버 (눌리는 애니메이션) */
+
+nav a:hover {
+    background-color: #FF1744; /* 마이콜 락스타 레드 */
+    color: #FFFFFF;
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px #1E2923;
+}
+
+
+/* ============================================
+   4. 메인 콘텐츠 영역
+   ============================================ */
+
+.content {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    display: flex;
+    gap: 30px;
+    align-items: stretch;
+}
+
+
+/* ============================================
+   5. 자기소개 영역 (만화 컷/말풍선 스타일)
+   ============================================ */
+
+.section1 {
+    flex: 3;
+    padding: 35px;
+    background-color: #FFFFFF;
+    border: 4px solid #1E2923;
+    border-radius: 24px;
+    box-shadow: 8px 8px 0px #28B463; /* 둘리 초록 입체 그림자 */
+}
+
+.section1 h3 {
+    margin-bottom: 25px;
+    padding-bottom: 12px;
+    color: #1E2923;
+    font-size: 26px;
+    font-weight: 900;
+    border-bottom: 4px dashed #FFD54F; /* 노란 점선 */
+}
+
+#pic1{
+    width:100%;
+}
+
+/* ============================================
+   6. 학생 사진 (레트로 만화 액자)
+   ============================================ */
+
+#stu-pic {
+    width: 180px;
+    height: 220px;
+    object-fit: cover;
+    float: left;
+    margin: 0 28px 18px 0;
+    padding: 8px;
+    background-color: #FFD54F; /* 희동이 옐로우 프레임 */
+    border: 3px solid #1E2923;
+    border-radius: 18px;
+    box-shadow: 5px 5px 0px #1E2923;
+    transition: all 0.2s ease;
+}
+
+#stu-pic:hover {
+    transform: rotate(-3deg) scale(1.03); /* 애니메이션처럼 삐뚤어지는 효과 */
+    box-shadow: 7px 7px 0px #FF1744;
+}
+
+
+/* ============================================
+   7. 자기소개 텍스트
+   ============================================ */
+
+.section1 p {
+    font-size: 16px;
+    color: #2C3E35;
+    text-align: justify;
+    line-height: 2;
+    word-break: keep-all;
+    font-weight: 600;
+}
+
+
+/* float 해제 */
+
+.section1::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+/* ============================================
+   8. 참조 링크 영역 (사이드바)
+   ============================================ */
+
+aside {
+    flex: 1;
+    min-width: 230px;
+    padding: 30px 25px;
+    background-color: #FFFDF0;
+    border: 4px solid #1E2923;
+    border-radius: 24px;
+    text-align: center;
+    box-shadow: 8px 8px 0px #4FC3F7; /* 또치 하늘색 입체 그림자 */
+}
+
+aside h3 {
+    margin-bottom: 25px;
+    padding-bottom: 12px;
+    color: #1E2923;
+    font-size: 22px;
+    font-weight: 900;
+    border-bottom: 3px dashed #FF8A65;
+}
+
+
+/* ============================================
+   9. 포털 사이트 이미지
+   ============================================ */
+
+aside a {
+    display: block;
+    margin: 18px auto;
+    text-decoration: none;
+}
+
+.portal {
+    width: 160px;
+    height: 65px;
+    object-fit: contain;
+    padding: 8px;
+    background-color: #FFFFFF;
+    border: 3px solid #1E2923;
+    border-radius: 16px;
+    box-shadow: 4px 4px 0px #1E2923;
+    transition: all 0.2s ease;
+}
+
+.portal:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #FFD54F;
+}
+
+
+/* ============================================
+   10. 푸터 (빙하 레트로 그라데이션)
+   ============================================ */
+
+footer {
+    width: 100%;
+    margin-top: 50px;
+    padding: 25px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #4FC3F7 0%, #2ECC71 100%);
+    border-top: 4px solid #1E2923;
+    box-shadow: 0 -4px 0px #1E2923;
+}
+
+footer h2 {
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-shadow: 1.5px 1.5px 0px #1E2923;
+}
+
+
+/* ============================================
+   11. 반응형 웹
+   ============================================ */
+
+@media screen and (max-width: 768px) {
+
+    header {
+        padding: 30px 15px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    nav a {
+        min-width: 80px;
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .content {
+        width: 92%;
+        flex-direction: column;
+        margin: 25px auto;
+    }
+
+    .section1 {
+        padding: 25px;
+    }
+
+    #stu-pic {
+        float: none;
+        display: block;
+        width: 160px;
+        height: 200px;
+        margin: 0 auto 25px auto;
+    }
+
+    .section1 p {
+        font-size: 15px;
+        text-align: left;
+    }
+
+    aside {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .portal {
+        width: 150px;
+    }
+}
+
+
+/* ============================================
+   12. 작은 스마트폰 화면
+   ============================================ */
+
+@media screen and (max-width: 480px) {
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    nav {
+        padding: 12px;
+    }
+
+    nav span {
+        width: 47%;
+    }
+
+    nav a {
+        width: 100%;
+    }
+
+    .section1 h3,
+    aside h3 {
+        font-size: 20px;
+    }
+
+    footer h2 {
+        font-size: 12px;
+    }
+}
